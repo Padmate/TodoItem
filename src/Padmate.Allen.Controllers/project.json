@@ -1,0 +1,28 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "Padmate.Allen.Controllers Class Library",
+  "authors": [ "Allen" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "frameworks": {
+    "net451": { },
+    "dotnet5.4": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Runtime": "4.0.21-beta-23516",
+        "System.Threading": "4.0.11-beta-23516",
+        "Microsoft.AspNet.Mvc": "6.0.0-rc1-final"
+      }
+    }
+  },
+  "dependencies": {
+    "Microsoft.AspNet.Mvc.ViewFeatures": "6.0.0-rc1-final",
+    "Padmate.Allen.Dao": "1.0.0-*",
+    "Padmate.Allen.Entities": "1.0.0-*",
+    "Padmate.Allen.Models": "1.0.0-*",
+    "Padmate.Allen.Repository": "1.0.0-*"
+  }
+}
