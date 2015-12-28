@@ -34,7 +34,7 @@ namespace Padmate.Allen.TodoApi
 
         public IConfigurationRoot Configuration { get; set; }
 
-        private string pathToDoc = "D:\\VSWorkSpace2015\\Padmate.Allen.TodoApi\\artifacts\\bin\\Padmate.Allen.TodoApi\\Debug\\dnx451\\Padmate.Allen.TodoApi.xml";
+        private string pathToDoc = "D:\\VSWorkSpace2015\\Padmate.Allen.TodoApi\\artifacts\\bin\\Padmate.Allen.Controllers\\Debug\\dnx451\\Padmate.Allen.Controllers.xml";
     
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
@@ -48,11 +48,12 @@ namespace Padmate.Allen.TodoApi
             #region  swagger
             services.ConfigureSwaggerDocument(options =>
             {
+                
                 options.SingleApiVersion(new Info
                 {
                     Version = "v1",
-                    Title = "Geo Search API",
-                    Description = "A simple api to search using geo location in Elasticsearch",
+                    Title = "Restful web api 测试文档",
+                    Description = "A simple api to search using Swagger",
                     TermsOfService = "None"
                 });
                 options.OperationFilter(new Swashbuckle.SwaggerGen.XmlComments.ApplyXmlActionComments(pathToDoc));

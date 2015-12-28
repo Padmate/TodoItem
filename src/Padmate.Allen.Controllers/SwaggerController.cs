@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Padmate.Allen.TodoApi.Controllers
+namespace Padmate.Allen.Controllers
 {
     [Route("api/[controller]")]
-    public class TodoController:Controller
+    public class SwaggerController:Controller
     {
         [FromServices]
         public ITodoRepository TodoItems { get; set; }
@@ -24,7 +24,12 @@ namespace Padmate.Allen.TodoApi.Controllers
             return TodoItems.GetAll();
         }
 
-        [HttpGet("getbyid/{id:int?}", Name = "GetTodo")]
+        /// <summary>
+        /// 根据ID获取数据
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns></returns>
+        [HttpGet("getbyid/{id}")]
         public IActionResult GetById(string id)
         {
             var item = TodoItems.Find(id);

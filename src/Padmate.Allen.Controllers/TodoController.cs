@@ -26,6 +26,11 @@ namespace Padmate.Allen.Controllers
             return TodoItems.GetAll();
         }
 
+        /// <summary>
+        /// 根据ID获取数据
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns></returns>
         [HttpGet("getbyid/{id:int?}", Name = "GetTodo")]
         public IActionResult GetById(string id)
         {
@@ -36,8 +41,8 @@ namespace Padmate.Allen.Controllers
             }
             return new ObjectResult(item);
         }
-        
-        //[HttpPost]
+
+        [HttpPost]
         public IActionResult PostCreateaaaa([FromBody] TodoItem item)
         {
             if (item == null)
@@ -48,6 +53,12 @@ namespace Padmate.Allen.Controllers
             return CreatedAtRoute("GetTodo", new { controller = "Todo", id = item.Key }, item);
         }
 
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <param name="item">ITEM</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult Update(string id, [FromBody] TodoItem item)
         {
@@ -66,6 +77,10 @@ namespace Padmate.Allen.Controllers
             return new NoContentResult();
         }
 
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
