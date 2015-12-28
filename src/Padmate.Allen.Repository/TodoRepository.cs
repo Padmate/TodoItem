@@ -11,7 +11,12 @@ namespace Padmate.Allen.Repository
 
         public TodoRepository()
         {
-            Add(new TodoItem { Name = "Item1" });
+            List<string> subItems = new List<string>();
+            subItems.Add("subitem1");
+            subItems.Add("subitem2");
+            subItems.Add("subitem3");
+
+            Add(new TodoItem { Name = "Item1",SubItems = subItems });
         }
 
         public IEnumerable<TodoItem> GetAll()

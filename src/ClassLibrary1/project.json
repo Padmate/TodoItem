@@ -1,0 +1,15 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "ClassLibrary1 Class Library",
+  "authors": [ "Allen" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+ 
+
+  "frameworks": {
+    "dnx451": { },
+    "dnxcore50": { }
+  }
+}

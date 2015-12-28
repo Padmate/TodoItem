@@ -10,12 +10,17 @@ namespace Padmate.Allen.Controllers
 {
     //[Route("api/[controller]/[action]")]
     [Route("api/[controller]")]
+    [Produces("application/json")]
     public class TodoController : Controller
     {
         [FromServices]
         public ITodoRepository TodoItems { get; set; }
         
-        [HttpGet("all")]
+        /// <summary>
+        /// 获取所有数据
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public IEnumerable<TodoItem> GetAll()
         {
             return TodoItems.GetAll();
